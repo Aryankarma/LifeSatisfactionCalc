@@ -6,27 +6,32 @@
   justify-content: center;
   flex-direction: column;
 }.container{
-  gap: 20px;
+  gap: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
 }.heading{
+  text-align: center;
   position: absolute;
   top: 2rem;
   margin: 0; 
 }.inputBoxes{
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  /* gap: 20px; */
   align-items: center;
   justify-content: center;
   position: relative;
+  /* outline: 1px solid white; */
+  padding: .75rem 0;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px #111;
 }#typeRadio{
   margin: .5rem;
 }.label{
-  padding: .75rem 1rem;
+  padding: .75rem 1.25rem;
   border-radius: 10px;
 }.input{
   height: 30px;

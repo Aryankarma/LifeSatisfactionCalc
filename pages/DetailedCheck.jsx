@@ -25,7 +25,7 @@ function QuickCheck() {
     result = Number(result.toFixed(2));
     setFinalResult(result)
     setShowPopup(true);
-    console.log(result);
+    // console.log(result);
   };
 
 
