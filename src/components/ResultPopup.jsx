@@ -14,14 +14,26 @@ const LifeSatisfactionPopup = ({ score, onClose }) => {
   };
 
     const getGreeting = (score) => {
-        if ( 0 > score > 25){
+        if ( 0 > score >= 25){
             return "With a score of " + score + " , your current life satisfaction is at a low point, but it's a great opportunity to identify areas for positive change."
-        } else if (25 > score > 50) {
-            return "A score of " + score + " suggests some dissatisfaction, but you're beginning to find what brings you joy and contentment."            
-        } else if (50 > score > 75) {
-            return "At " + score +  " , you're halfway to maximum life satisfaction, showing a balance between positive and negative experiences."
+        } else if (25 > score >= 50) {
+          return (
+            "A score of " +
+            score +
+            " suggests some dissatisfaction, but you're beginning to find what brings you joy and contentment."
+          );
+        } else if (50 > score >= 75) {
+          return (
+            "At " +
+            score +
+            " , you're halfway to maximum life satisfaction, showing a balance between positive and negative experiences."
+          );
         } else {
-            return "With a score of " + score + " , you're experiencing a high level of life satisfaction, enjoying many aspects of your life."
+          return (
+            "With a score of " +
+            score +
+            " , you're experiencing a high level of life satisfaction, enjoying many aspects of your life."
+          );
         }
     };
 
