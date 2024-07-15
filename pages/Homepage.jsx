@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import style from "./Homestyles.module.css";
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 
 function Home(){
   const [quick, setQuick] = useState(true);
@@ -51,6 +54,33 @@ function Home(){
               onClick={redirectUser}
               style={{ width: "150px" }}
             >{`Check ->`}</button>
+          </div>
+
+          <div className={style.links}>
+            <a
+              href="http://github.com/aryankarma/lifesatisfactioncalc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="http://linkedin.com/in/aryankarma/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+
+            <a
+              href="http://x.com/karmaaryan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaTwitter />
+            </a>
+            
           </div>
         </div>
       );
