@@ -14,27 +14,32 @@ const LifeSatisfactionPopup = ({ score, onClose }) => {
   };
 
     const getGreeting = (score) => {
-        if ( 0 < score <= 25){
+      console.log(typeof (score));
+        if (0 < score && score <= 25) {
+            console.log("here")  
             return "With a score of " + score + " , your current life satisfaction is at a low point, but it's a great opportunity to identify areas for positive change."
-        } else if (25 < score <= 50) {
-          return (
-            "A score of " +
-            score +
-            " suggests some dissatisfaction, but you're beginning to find what brings you joy and contentment."
-          );
-        } else if (50 < score <= 75) {
-          return (
-            "At " +
-            score +
-            " , you're halfway to maximum life satisfaction, showing a balance between positive and negative experiences."
-          );
-        } else if (75 < score <= 100) {
-          return (
-            "With a score of " +
-            score +
-            " , you're experiencing a high level of life satisfaction, enjoying many aspects of your life."
-          );
-        }
+          } else if (25 < score && score <= 50) {
+            console.log("here")  
+            return (
+              "A score of " +
+              score +
+              " suggests some dissatisfaction, but you're beginning to find what brings you joy and contentment."
+            );
+          } else if (50 < score && score <= 75) {
+            console.log("here");
+            return (
+              "At " +
+              score +
+              " , you're halfway to high level of life satisfaction, showing a balance between positive and negative experiences."
+            );
+          } else if (75 < score && score <= 100) {
+            console.log("here");
+            return (
+              "With a score of " +
+              score +
+              " , you're experiencing a high level of life satisfaction, enjoying many aspects of your life."
+            );
+          }
     };
 
   const shareOnSocialMedia = (platform) => {
@@ -42,7 +47,7 @@ const LifeSatisfactionPopup = ({ score, onClose }) => {
     const url = window.location.href;
 
     switch (platform) {
-      case "twitter":
+      case "twitter": 
         window.open(
           `https://twitter.com/intent/tweet?text=${encodeURIComponent(
             text
